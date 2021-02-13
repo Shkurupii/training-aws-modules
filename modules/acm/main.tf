@@ -7,7 +7,11 @@ terraform {
 
 resource "aws_acm_certificate" "cert" {
   domain_name = var.domain_name
-  subject_alternative_names = var.alternative_names
+  subject_alternative_names = [
+    "www.${domain_name}",
+    "api.${domain_name}",
+    "app.${domain_name}"
+  ]
   validation_method = "DNS"
 
   lifecycle {
