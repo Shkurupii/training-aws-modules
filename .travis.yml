@@ -1,0 +1,9 @@
+language: minimal
+
+script:
+- make _gen-modules
+- git status
+
+branches:
+  only:
+    - master
