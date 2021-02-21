@@ -1,26 +1,24 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | 0.14.5 |
+No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| aws | n/a |
+No provider.
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| domain\_name | Domain Name | `string` | n/a | yes |
+| environment | Tag 'Environment' | `string` | n/a | yes |
+| username | Tag 'Username' | `string` | n/a | yes |
+| workspace | Tag 'Workspace' | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| cert\_status | Status of the certificate |
+| all\_tags | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
