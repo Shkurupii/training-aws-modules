@@ -68,3 +68,7 @@ resource "aws_route53_record" "amazonses_dkim_record" {
   records = [
     "${element(aws_ses_domain_dkim.amazonses_domain_dkim.dkim_tokens, count.index)}.dkim.amazonses.com"]
 }
+
+resource "aws_ses_email_identity" "amazonses_ei_test" {
+  email = "test@${var.domain_name}"
+}
