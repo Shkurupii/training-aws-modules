@@ -1,7 +1,7 @@
 language: minimal
 
 script:
-  - make _gen-modules
+- make _gen-modules
 
 after_success:
   - git config user.email "travis@travis-ci.com"
@@ -9,6 +9,7 @@ after_success:
   - git add .
   - git commit -m "updated README.md"
   - git push https://${GITHUB_API_KEY}@${GH_REF} HEAD:master
+  - make _gen-modules
 
 branches:
   only:
